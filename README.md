@@ -21,7 +21,7 @@ A BitTorrent (v1) tracker implementation written in Python.
     * [BEP 52 - The BitTorrent Protocol Specification v2](https://www.bittorrent.org/beps/bep_0052.html)
 
 ## Setup
-1. `sudo apt install libev-dev`
+1. `sudo apt install build-essential libev-dev`
 2. `git clone https://github.com/snaacky/bittracker.git`
 3. `cd bittracker`
 4. `uv sync`
