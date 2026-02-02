@@ -1,0 +1,13 @@
+[project]
+name = "bittracker"
+version = "0.1.0"
+description = "A performant BitTorrent v1 tracker written in Python"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = ["apscheduler>=3.11.2", "bencode-cy>=1.2.2", "bjoern>=3.2.2"]
+
+[dependency-groups]
+dev = ["ruff>=0.14.14"]
+
+[tool.ruff]
+line-length = 120
