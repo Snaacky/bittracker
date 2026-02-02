@@ -10,7 +10,7 @@ from bittracker.swarms import swarms
 
 def announce(environ: dict, params: dict) -> BencodeResponse:
     # Normalize the parameters from the request for future reference.
-    ip = environ.get("REMOTE_ADDR", "127.0.0.1")
+    ip = environ.get(config["server"]["real_ip_header"], "127.0.0.1")
     port = int(params.get("port", 0))
     info_hash = params.get("info_hash")
     peer_id = params.get("peer_id")
@@ -42,6 +42,12 @@ def announce(environ: dict, params: dict) -> BencodeResponse:
     key = (ip, port, peer_id)
     peer = swarm.get(key)
 
+    # Attempt to fetch the Event enum for the event passed.
+    try:
+        event = Event(event)
+    except ValueError:
+        event = None
+
     if not peer and event is not Event.STOPPED:
         peer = Peer(
             peer_id=peer_id,
@@ -54,6 +60,7 @@ def announce(environ: dict, params: dict) -> BencodeResponse:
             last_announce=now,
         )
         swarm[key] = peer
+
     elif peer and event is not Event.STOPPED:
         if uploaded:
             peer.uploaded += uploaded
@@ -64,6 +71,7 @@ def announce(environ: dict, params: dict) -> BencodeResponse:
         if event:
             peer.last_event = event
         peer.last_announce = now
+
     elif peer and event is Event.STOPPED:
         swarm.pop(key, None)
 

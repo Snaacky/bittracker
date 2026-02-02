@@ -1,13 +1,14 @@
 [server]
-host = "127.0.0.1"          # Host for Bjoern server to listen on.
-port = 8080                 # Port for Bjoern server to listen on.
+host = "127.0.0.1"                 # Host for Bjoern server to listen on.
+port = 8080                        # Port for Bjoern server to listen on.
+real_ip_header = "HTTP_X_REAL_IP"  # Header that will pass the clients IP to the tracker.
 
 [database]
-uri = "sqlite:///data.db"   # URI to your SQLite database.
+uri = "sqlite:///data.db"          # URI to your SQLite database.
 
-[tracker]                   # interval, min_interval, client_dead_after, and prune_interval are values in seconds.
-interval = 1800             # How often the client should reannounce to the tracker.
-min_interval = 300          # The absolute minimum interval before the client can announce again.
-client_dead_after = 3600    # How long since last announce until the client is considered dead.
-prune_interval = 600        # How often the scheduler for pruning "dead" clients should run.
-swarm_peer_limit = 200      # The maximum amount of peers to return per announce.
+[tracker]                          # interval, min_interval, client_dead_after, and prune_interval are values in seconds.
+interval = 1800                    # How often the client should reannounce to the tracker.
+min_interval = 300                 # The absolute minimum interval before the client can announce again.
+client_dead_after = 3600           # How long since last announce until the client is considered dead.
+prune_interval = 600               # How often the scheduler for pruning "dead" clients should run.
+swarm_peer_limit = 200             # The maximum amount of peers to return per announce.

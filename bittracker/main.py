@@ -4,15 +4,15 @@ import bjoern
 
 from bittracker.config import config
 from bittracker.router import handle_request, register_route
-from bittracker.routes.admin import admin
 from bittracker.routes.announce import announce
+from bittracker.routes.stats import stats
 from bittracker.scheduler import register_schedulers
 
 
 def setup() -> None:
     """Registers the routes to route requests across and setup the schedulers."""
-    register_route("/admin", admin)
     register_route("/announce", announce)
+    register_route("/stats", stats)
     register_schedulers()
 
 
