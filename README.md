@@ -42,7 +42,7 @@ Running 1s test @ http://127.0.0.1:8080/announce
 Requests/sec:  39872.95
 Transfer/sec:      8.20MB
 ```
-This benchmark was taken on an i7-13700KF @ 5.0 GHz with 32GB DDR4 @ 3200MHz. Your results will vary depending on your hardware.
+This benchmark was taken on an i7-13700KF @ 5.0 GHz with 32GB DDR4 @ 3200MHz without proper TLS termination. Your results will vary depending on your setup and hardware.
 
 ## sysctl.conf
 ```
