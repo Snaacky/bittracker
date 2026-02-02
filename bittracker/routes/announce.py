@@ -1,11 +1,11 @@
 from datetime import datetime, timezone
 from itertools import islice
 
-from bittrackerv2.config import config
-from bittrackerv2.entities import Peer
-from bittrackerv2.enums import Event
-from bittrackerv2.responses import BencodeResponse
-from bittrackerv2.swarms import swarms
+from bittracker.config import config
+from bittracker.entities import Peer
+from bittracker.enums import Event
+from bittracker.responses import BencodeResponse
+from bittracker.swarms import swarms
 
 
 def announce(environ: dict, params: dict) -> BencodeResponse:

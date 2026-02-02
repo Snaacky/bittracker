@@ -2,11 +2,11 @@ from typing import Any
 
 import bjoern
 
-from bittrackerv2.config import config
-from bittrackerv2.router import handle_request, register_route
-from bittrackerv2.routes.admin import admin
-from bittrackerv2.routes.announce import announce
-from bittrackerv2.scheduler import register_schedulers
+from bittracker.config import config
+from bittracker.router import handle_request, register_route
+from bittracker.routes.admin import admin
+from bittracker.routes.announce import announce
+from bittracker.scheduler import register_schedulers
 
 
 def setup() -> None:

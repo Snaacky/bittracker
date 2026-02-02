@@ -4,9 +4,9 @@ from datetime import datetime, timedelta, timezone
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 
-from bittrackerv2.config import config
-from bittrackerv2.swarms import swarms
-from bittrackerv2.utils import format_bytes
+from bittracker.config import config
+from bittracker.swarms import swarms
+from bittracker.utils import format_bytes
 
 
 def print_status() -> None:

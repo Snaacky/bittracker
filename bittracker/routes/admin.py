@@ -1,5 +1,5 @@
-from bittrackerv2.config import config
-from bittrackerv2.responses import JSONResponse
+from bittracker.config import config
+from bittracker.responses import JSONResponse
 
 
 def admin(environ: dict, params: dict) -> JSONResponse:

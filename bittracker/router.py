@@ -1,6 +1,6 @@
 from urllib.parse import parse_qs
 
-from bittrackerv2.responses import Response
+from bittracker.responses import Response
 
 
 routes = {}

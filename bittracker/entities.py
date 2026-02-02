@@ -3,7 +3,7 @@ from datetime import datetime
 import socket
 import struct
 
-from bittrackerv2.enums import Event
+from bittracker.enums import Event
 
 
 @dataclass(slots=True)
