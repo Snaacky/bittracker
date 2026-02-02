@@ -9,5 +9,5 @@ uri = "sqlite:///data.db"   # URI to your SQLite database.
 interval = 1800             # How often the client should reannounce to the tracker.
 min_interval = 300          # The absolute minimum interval before the client can announce again.
 client_dead_after = 3600    # How long since last announce until the client is considered dead.
-prune_interval = 1          # How often the scheduler for pruning "dead" clients should run.
+prune_interval = 600        # How often the scheduler for pruning "dead" clients should run.
 swarm_peer_limit = 200      # The maximum amount of peers to return per announce.
